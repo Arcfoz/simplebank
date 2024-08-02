@@ -116,7 +116,7 @@ func TestTransferTx(t *testing.T) {
 
 }
 
-func TestTransferTxDeadlock(t *testing.T) {
+func TestTransefrTxDeadlock(t *testing.T) {
 	store := NewStore(testDB)
 
 	account1 := createRandomAccount(t)

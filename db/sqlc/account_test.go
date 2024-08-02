@@ -11,8 +11,9 @@ import (
 )
 
 func createRandomAccount(t *testing.T) Accounts {
+	user := createRandomUser(t)
 	arg := CreateAccountParams{
-		Owner:    util.RandomOwner(),
+		Owner:    user.Username,
 		Balance:  util.RandomMoney(),
 		Currency: util.RandomCurrency(),
 	}
@@ -88,6 +89,7 @@ func TestDeleteAccounts(t *testing.T) {
 
 func TestListAccounts(t *testing.T) {
 	var lastAccount Accounts
+
 	for i := 0; i < 10; i++ {
 		lastAccount = createRandomAccount(t)
 	}

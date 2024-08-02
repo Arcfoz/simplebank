@@ -10,3 +10,5 @@ sql:
         sql_package: "database/sql"
         emit_json_tags : True
         emit_exact_table_names: True
+        emit_empty_slices: True
+        emit_interface: True
