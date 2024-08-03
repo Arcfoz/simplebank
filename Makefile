@@ -1,5 +1,5 @@
 postgres:
-	docker run --name postgres12 --network bank-network -e POSTGRES_USER=root -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:12-alpine
+	docker run --name postgres12 --network bank-network -e POSTGRES_USER=root -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:16.3-alpine3.20
 createdb:
 	docker exec -it postgres12 createdb --username=root --owner=root simple_bank
 dropdb:
